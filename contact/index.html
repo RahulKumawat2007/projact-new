@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Contact Page</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+         :root {
+            --primary-blue: #0A558C;
+            --accent-orange: #F28C28;
+            --light-bg: #f4f7fa;
+            --text-dark: #333;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background: #fff;
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 50px;
+            font-weight: bold;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+        }
+
+        .logo i {
+            font-size: 55px;
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .nav-links select {
+            width: 120px;
+            font-size: 25px;
+            font-weight: bold;
+
+
+        }
+
+        .nav-links select:hover {
+            color: var(--accent-orange);
+
+        }
+
+
+        .nav-links a:hover {
+            color: var(--accent-orange);
+        }
+
+        .btn-contact {
+            background-color: var(--accent-orange);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-contact:hover {
+            background-color: #d97515;
+        }
+
+
+        .contact-section {
+            padding: 80px 10%;
+        }
+
+        .contact-container {
+            background: #ffffff;
+            border-radius: 20px;
+            display: flex;
+            gap: 40px;
+            padding: 50px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h1 {
+            font-size: 36px;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .info-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .info-box span {
+            font-size: 22px;
+        }
+
+        .contact-form {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 40px;
+            border-radius: 16px;
+            color: #fff;
+        }
+
+        .contact-form h2 {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 30px;
+            background: #ffdd57;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .contact-form button:hover {
+            background: #ffd000;
+        }
+
+        .footer {
+            background: #0f172a;
+            color: #ffffff;
+            padding: 50px 0 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-box h2 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .footer-box h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #cbd5f5;
+        }
+
+        .footer-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-box ul li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .footer-box ul li a {
+            text-decoration: none;
+            color: #cbd5f5;
+            transition: 0.3s;
+        }
+
+        .footer-box ul li a:hover {
+            color: #38bdf8;
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            text-align: center;
+            padding: 15px 0;
+            background: #020617;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <i class="fas fa-brain"></i>
+            MDCH
+        </div>
+        <ul class="nav-links">
+            <li><a href="file:///C:/Users/rahul/Desktop/new%20project/home%20page/index.html">Home</a></li>
+            <select>
+                <option>Courses</option>
+                <option>Web design</option>
+                <option>AI</option>
+                <option>Graphic design</option>
+                <option>Digital marketing</option>
+                <option>UI & UX</option>
+                <option>Forensics</option>
+                <option>Cyber security</option>
+            </select>
+            <li><a href="file:///C:/Users/rahul/Desktop/new%20project/about/index.html">About Us</a></li>
+            <li><a href="file:///C:/Users/rahul/Desktop/new%20project/contact/index.html">Contact</a></li>
+        </ul>
+        <a href="#" class="btn-contact">Contact</a>
+    </nav>
+
+    <section class="contact-section">
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h1>Contact Our
+                    (MD COACHING HUB )</h1>
+                <p>
+                    Have questions about courses, admissions, or support?
+                    Reach out to us anytime — we’re here to help you succeed.
+                </p>
+
+                <div class="info-box">
+                    <p>📍 3<sup>rd</sup> Floor Rathi complex ,Kuchaman city</p>
+                </div>
+
+                <div class="info-box">
+                    <p> 📞 8529848632 , +91 9694566436</p>
+                </div>
+
+                <div class="info-box">
+                    <p> ✉ mdcoachinghub.com</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject">
+                    <textarea rows="5" placeholder="Your Message"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h2>IT Software</h2>
+                <p>We build modern websites, software solutions & digital products for your business growth.</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Services</h3>
+                <ul>
+                    <li>Web Development</li>
+                    <li>Software Development</li>
+                    <li>UI / UX Design</li>
+                    <li>SEO & Marketing</li>
+                    <li>App Development</li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p>Email: mdcoachinghub.com</p>
+                <p>Phone:+91 9694566436</p>
+                <p>Location: 3ʳᵈ Floor, Rathi Complex, Kuchaman City</p>
+            </div>
+
+        </div>
+
+
+    </footer>
+
+</body>
+
+</html>
